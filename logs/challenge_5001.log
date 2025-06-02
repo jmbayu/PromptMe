@@ -1,0 +1,44 @@
+Markup imported successfully: <class 'markupsafe.Markup'>
+ * Serving Flask app 'app1'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://53.64.90.218:5001
+Press CTRL+C to quit
+127.0.0.1 - - [02/Jun/2025 17:15:14] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Jun/2025 17:15:14] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Jun/2025 17:15:14] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [02/Jun/2025 17:15:24] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [02/Jun/2025 17:15:24] "GET /chat HTTP/1.1" 200 -
+127.0.0.1 - - [02/Jun/2025 17:15:24] "GET /static/style.css HTTP/1.1" 304 -
+[2025-06-02 17:15:56,812] ERROR in app: Exception on /chat [POST]
+Traceback (most recent call last):
+  File "c:\Users\jombau\genai\security\PromptMe\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jombau\genai\security\PromptMe\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jombau\genai\security\PromptMe\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jombau\genai\security\PromptMe\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "challenges/LLM01_Prompt_Injection/app1.py", line 92, in chat
+    bot_response = call_ollama(user_input)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "challenges/LLM01_Prompt_Injection/app1.py", line 27, in call_ollama
+    response = ollama.chat(
+               ^^^^^^^^^^^^
+  File "c:\Users\jombau\genai\security\PromptMe\.venv\Lib\site-packages\ollama\_client.py", line 333, in chat
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "c:\Users\jombau\genai\security\PromptMe\.venv\Lib\site-packages\ollama\_client.py", line 178, in _request
+    return cls(**self._request_raw(*args, **kwargs).json())
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jombau\genai\security\PromptMe\.venv\Lib\site-packages\ollama\_client.py", line 124, in _request_raw
+    raise ConnectionError(CONNECTION_ERROR_MESSAGE) from None
+ConnectionError: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+127.0.0.1 - - [02/Jun/2025 17:15:56] "POST /chat HTTP/1.1" 500 -
