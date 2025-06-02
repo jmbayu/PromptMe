@@ -1,0 +1,11 @@
+---
+description: be terse and always answer in english
+globs: 
+alwaysApply: true
+---
+Always answer in english, prefer terse answers, always use functional code
+
+Create a folder named cursor in the directory containing task.md, then store any created files and folders inside it
+
+
+make sure you detect my running environment because i hate it when "&&" is used to chain commands on a windows system with powershell,

@@ -1,0 +1,6 @@
+---
+description: show chain of thought
+globs: 
+alwaysApply: false
+---
+First save the plan of all intended actions in a file called playbook.md
