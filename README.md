@@ -8,7 +8,7 @@
 <img src="https://github.com/R3dShad0w7/PromptMe/blob/main/static/logo.png?raw=true" width="600" alt="Thumbnail"/>
 </p>
 
-### A vulnerable application designed to demonstrate the OWASP Top 10 for Large Language Model (LLM) Applications.
+### A vulnerable application designed to demonstrate the OWASP Top 10 for Large Language Model (LLM) Applications 2025 .
 
 PromptMe is an educational project that showcases security vulnerabilities in large language models (LLMs) and their web integrations. It includes 10 hands-on challenges inspired by the OWASP LLM Top 10, demonstrating how these vulnerabilities can be discovered and exploited in real-world scenarios.
 
