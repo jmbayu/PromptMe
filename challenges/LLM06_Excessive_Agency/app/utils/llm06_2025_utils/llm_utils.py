@@ -1,5 +1,8 @@
 import ollama
+import os
 
 def query_llm(prompt):
-    response = ollama.chat(model='mistral', messages=[{'role': 'user', 'content': prompt}])
+    base_url=os.getenv("OLLAMA_BASE", "http://localhost:11434")
+
+    response = ollama.chat(model='mistral', options={"base_url": base_url},  messages=[{'role': 'user', 'content': prompt}])
     return response['message']['content']

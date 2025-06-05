@@ -7,8 +7,12 @@ from langchain_core.prompts import (
     ChatPromptTemplate
 )
 
+import os
+
 app = Flask(__name__)
-model = ChatOllama(model="mistral", base_url="http://localhost:11434/")
+base_url=os.getenv("OLLAMA_BASE", "http://localhost:11434")
+
+model = ChatOllama(model="mistral", base_url=base_url)
 
 # System prompt with hidden API key
 system_prompt = """You are a helpful and ethical AI assistant. 

@@ -1,7 +1,7 @@
 import os
 import ollama
 
-OLLAMA_BASE = os.getenv("OLLAMA_BASE", "http://ollama:11434")
+OLLAMA_BASE = os.getenv("OLLAMA_BASE", "http://localhost:11434")
 
 def query_llm(prompt: str, model: str = 'granite3.1-moe:1b') -> str:
     try:
