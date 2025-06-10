@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Localhost Env",
+            "name": "main@localhost",
             "type": "debugpy",
             "request": "launch",
-            "program": "${file}",
+            "program": "${workspaceFolder}/main.py",
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
@@ -17,16 +17,140 @@
             }
         },
         {
-            "name": "VBox Nat Env",
+            "name": "main@VBox.Nat",
             "type": "debugpy",
             "request": "launch",
-            "program": "${file}",
+            "program":"${workspaceFolder}/main.py",
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
                 "OLLAMA_HOST":"10.0.2.2",
                 "OLLAMA_BASE":"http://10.0.2.2:11434"
             }
-        }
+        },
+        {
+            "name": "app1@localhost",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/challenges/LLM01_Prompt_Injection/app1.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "OLLAMA_HOST":"127.0.0.1",
+                "OLLAMA_BASE":"http://127.0.0.1:11434"
+            }
+        },
+        {
+            "name": "LLM01_Prompt_Injection@localhost",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/challenges/LLM01_Prompt_Injection/app1.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "OLLAMA_HOST":"127.0.0.1",
+                "OLLAMA_BASE":"http://127.0.0.1:11434"
+            }
+        },
+        {
+            "name": "LLM02_Sensitive_Information_Disclosure@localhost",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/challenges/LLM02_Sensitive_Information_Disclosure/app2.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "OLLAMA_HOST":"127.0.0.1",
+                "OLLAMA_BASE":"http://127.0.0.1:11434"
+            }
+        },        {
+            "name": "LLM03_Supply_Chain@localhost",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/challenges/LLM03_Supply_Chain/app3.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "OLLAMA_HOST":"127.0.0.1",
+                "OLLAMA_BASE":"http://127.0.0.1:11434"
+            }
+        },        {
+            "name": "LLM04_Data_and_Model_Poisoning@localhost",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/challenges/LLM04_Data_and_Model_Poisoning/app4.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "OLLAMA_HOST":"127.0.0.1",
+                "OLLAMA_BASE":"http://127.0.0.1:11434"
+            }
+        },        {
+            "name": "LLM05_Improper_Output_Handling@localhost",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/challenges/LLM05_Improper_Output_Handling/app5.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "OLLAMA_HOST":"127.0.0.1",
+                "OLLAMA_BASE":"http://127.0.0.1:11434"
+            }
+        },        {
+            "name": "LLM06_Excessive_Agency@localhost",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/challenges/LLM06_Excessive_Agency/app6.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "OLLAMA_HOST":"127.0.0.1",
+                "OLLAMA_BASE":"http://127.0.0.1:11434"
+            }
+        },        {
+            "name": "LLM07_System_Prompt_Leakage@localhost",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/challenges/LLM07_System_Prompt_Leakage/app7.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "OLLAMA_HOST":"127.0.0.1",
+                "OLLAMA_BASE":"http://127.0.0.1:11434"
+            }
+        },        {
+            "name": "LLM08_Vector_and_Embedding_Weaknesses@localhost",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/challenges/LLM08_Vector_and_Embedding_Weaknesses/app8.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "OLLAMA_HOST":"127.0.0.1",
+                "OLLAMA_BASE":"http://127.0.0.1:11434"
+            }
+        },        {
+            "name": "LLM09_Misinformation@localhost",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/challenges/LLM09_Misinformation/app9.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "OLLAMA_HOST":"127.0.0.1",
+                "OLLAMA_BASE":"http://127.0.0.1:11434"
+            }
+        },        {
+            "name": "LLM10_Unbounded_Consumption@localhost",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/challenges/LLM10_Unbounded_Consumption/app10.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "OLLAMA_HOST":"127.0.0.1",
+                "OLLAMA_BASE":"http://127.0.0.1:11434"
+            }
+        },
     ]
 }

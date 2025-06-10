@@ -2,6 +2,10 @@
 
 This challenge showcases a System Prompt Leakage vulnerability, where sensitive information—such as an API key—is embedded within the system prompt. Participants must use prompt injection techniques to extract the hidden data from the model's responses.
 
+
+# Claude 4’s Leaked System Prompt: Highlights and Insights
+https://simonwillison.net/2025/May/25/claude-4-system-prompt/
+
 ---
 
 ## Challenge Objective
