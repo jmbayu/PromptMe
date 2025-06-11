@@ -7,7 +7,7 @@ import os
 
 app = Flask(__name__)
 
-base_url=os.getenv("OLLAMA_BASE", "http://localhost:11434")
+base_url=os.getenv("OLLAMA_HOST", "http://localhost:11434")
 model = ChatOllama(model="mistral", base_url=base_url)
 #model = ChatOllama(model="mistral", base_url="http://host.docker.internal:11434/")
 

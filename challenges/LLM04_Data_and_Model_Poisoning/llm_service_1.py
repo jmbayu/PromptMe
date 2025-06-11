@@ -48,7 +48,7 @@ ANSWER:
 prompt = ChatPromptTemplate.from_template(prompt_template)
 
 # Model
-base_url=os.getenv("OLLAMA_BASE", "http://localhost:11434")
+base_url=os.getenv("OLLAMA_HOST", "http://localhost:11434")
 model = ChatOllama(model="mistral", base_url=base_url)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

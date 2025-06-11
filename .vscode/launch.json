@@ -12,8 +12,7 @@
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
-                "OLLAMA_HOST":"127.0.0.1",
-                "OLLAMA_BASE":"http://127.0.0.1:11434"
+                "OLLAMA_HOST":"https://ollama.mydomain.com"
             }
         },
         {
@@ -24,8 +23,7 @@
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
-                "OLLAMA_HOST":"10.0.2.2",
-                "OLLAMA_BASE":"http://10.0.2.2:11434"
+                "OLLAMA_HOST":"https://ollama.mydomain.com"
             }
         },
         {
@@ -36,8 +34,7 @@
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
-                "OLLAMA_HOST":"127.0.0.1",
-                "OLLAMA_BASE":"http://127.0.0.1:11434"
+                "OLLAMA_HOST":"https://ollama.mydomain.com"
             }
         },
         {
@@ -48,8 +45,7 @@
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
-                "OLLAMA_HOST":"127.0.0.1",
-                "OLLAMA_BASE":"http://127.0.0.1:11434"
+                "OLLAMA_HOST":"https://ollama.mydomain.com"
             }
         },
         {
@@ -60,8 +56,7 @@
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
-                "OLLAMA_HOST":"127.0.0.1",
-                "OLLAMA_BASE":"http://127.0.0.1:11434"
+                "OLLAMA_HOST":"https://ollama.mydomain.com"
             }
         },        {
             "name": "LLM03_Supply_Chain@localhost",
@@ -71,8 +66,7 @@
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
-                "OLLAMA_HOST":"127.0.0.1",
-                "OLLAMA_BASE":"http://127.0.0.1:11434"
+                "OLLAMA_HOST":"https://ollama.mydomain.com"
             }
         },        {
             "name": "LLM04_Data_and_Model_Poisoning@localhost",
@@ -82,8 +76,7 @@
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
-                "OLLAMA_HOST":"127.0.0.1",
-                "OLLAMA_BASE":"http://127.0.0.1:11434"
+                "OLLAMA_HOST":"https://ollama.mydomain.com"
             }
         },        {
             "name": "LLM05_Improper_Output_Handling@localhost",
@@ -93,8 +86,7 @@
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
-                "OLLAMA_HOST":"127.0.0.1",
-                "OLLAMA_BASE":"http://127.0.0.1:11434"
+                "OLLAMA_HOST":"https://ollama.mydomain.com"
             }
         },        {
             "name": "LLM06_Excessive_Agency@localhost",
@@ -104,8 +96,7 @@
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
-                "OLLAMA_HOST":"127.0.0.1",
-                "OLLAMA_BASE":"http://127.0.0.1:11434"
+                "OLLAMA_HOST":"https://ollama.mydomain.com"
             }
         },        {
             "name": "LLM07_System_Prompt_Leakage@localhost",
@@ -115,8 +106,7 @@
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
-                "OLLAMA_HOST":"127.0.0.1",
-                "OLLAMA_BASE":"http://127.0.0.1:11434"
+                "OLLAMA_HOST":"https://ollama.mydomain.com"
             }
         },        {
             "name": "LLM08_Vector_and_Embedding_Weaknesses@localhost",
@@ -126,8 +116,7 @@
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
-                "OLLAMA_HOST":"127.0.0.1",
-                "OLLAMA_BASE":"http://127.0.0.1:11434"
+                "OLLAMA_HOST":"https://ollama.mydomain.com"
             }
         },        {
             "name": "LLM09_Misinformation@localhost",
@@ -137,8 +126,7 @@
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
-                "OLLAMA_HOST":"127.0.0.1",
-                "OLLAMA_BASE":"http://127.0.0.1:11434"
+                "OLLAMA_HOST":"https://ollama.mydomain.com"
             }
         },        {
             "name": "LLM10_Unbounded_Consumption@localhost",
@@ -148,8 +136,7 @@
             "console": "integratedTerminal",
             "justMyCode": false,
             "env": {
-                "OLLAMA_HOST":"127.0.0.1",
-                "OLLAMA_BASE":"http://127.0.0.1:11434"
+                "OLLAMA_HOST":"https://ollama.mydomain.com"
             }
         },
     ]

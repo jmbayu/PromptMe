@@ -28,7 +28,7 @@ split_docs = text_splitter.split_documents(docs)
 
 vectorstore = FAISS.from_documents(split_docs, embedding_model)
 
-base_url=os.getenv("OLLAMA_BASE", "http://localhost:11434")
+base_url=os.getenv("OLLAMA_HOST", "http://localhost:11434")
 
 llm = Ollama(model="mistral", base_url=base_url)
 
