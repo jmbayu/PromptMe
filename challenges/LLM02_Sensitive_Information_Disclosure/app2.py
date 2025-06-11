@@ -29,8 +29,9 @@ split_docs = text_splitter.split_documents(docs)
 vectorstore = FAISS.from_documents(split_docs, embedding_model)
 
 base_url=os.getenv("OLLAMA_HOST", "http://localhost:11434")
+api_key = os.getenv("OLLAMA_API_KEY")
 
-llm = Ollama(model="mistral", base_url=base_url)
+llm = Ollama(model="mistral", base_url=base_url, headers={"Authorization": f"Bearer {api_key}"} if api_key else None)
 
 @app.route("/")
 def home():

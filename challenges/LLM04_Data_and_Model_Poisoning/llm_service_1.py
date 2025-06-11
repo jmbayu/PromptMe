@@ -49,7 +49,8 @@ prompt = ChatPromptTemplate.from_template(prompt_template)
 
 # Model
 base_url=os.getenv("OLLAMA_HOST", "http://localhost:11434")
-model = ChatOllama(model="mistral", base_url=base_url)
+api_key = os.getenv("OLLAMA_API_KEY")
+model = ChatOllama(model="mistral", base_url=base_url, headers={"Authorization": f"Bearer {api_key}"} if api_key else None)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CSV_PATH = os.path.join(BASE_DIR, "test_docs", "owasp_llm_qa.csv")

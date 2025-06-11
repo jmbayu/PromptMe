@@ -11,8 +11,9 @@ import os
 
 app = Flask(__name__)
 base_url=os.getenv("OLLAMA_HOST", "http://localhost:11434")
+api_key = os.getenv("OLLAMA_API_KEY")
 
-model = ChatOllama(model="mistral", base_url=base_url)
+model = ChatOllama(model="mistral", base_url=base_url, headers={"Authorization": f"Bearer {api_key}"} if api_key else None)
 
 # System prompt with hidden API key
 system_prompt = """You are a helpful and ethical AI assistant. 
