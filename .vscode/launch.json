@@ -105,7 +105,10 @@
             "justMyCode": false,
             "env": {
                 "OLLAMA_HOST":"https://ollama.mydomain.com",
-                "OLLAMA_API_KEY": "sk_xxxxx"
+                "OLLAMA_API_KEY": "sk_xxxxx",
+                "LLM06_LOCAL_DATA_MOUNT_POINT": "/mnt/llm06_data",
+                "LLM06_ACCESSIBLE_SUBPATH": "accessible_files",
+                "LLM06_RESTRICTED_SUBPATH": "restricted_files"
             }
         },        {
             "name": "LLM07_System_Prompt_Leakage@localhost",
