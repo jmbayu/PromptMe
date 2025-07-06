@@ -1,22 +1,37 @@
-# Original Source:
-[https://github.com/R3dshad0w7/promptme](https://github.com/R3dshad0w7/promptme)
-
 # PromptMe 
 
 
 <p>
-<img src="https://github.com/R3dShad0w7/PromptMe/blob/main/static/logo.png?raw=true" width="600" alt="Thumbnail"/>
+<img src="./static/logo.png?raw=true" width="600" alt="Thumbnail"/>
 </p>
 
 ### A vulnerable application designed to demonstrate the OWASP Top 10 for Large Language Model (LLM) Applications 2025 .
 
-PromptMe is an educational project that showcases security vulnerabilities in large language models (LLMs) and their web integrations. It includes 10 hands-on challenges inspired by the OWASP LLM Top 10, demonstrating how these vulnerabilities can be discovered and exploited in real-world scenarios.
+* Educational project that showcases security vulnerabilities in large language models (LLMs) and their web integrations. 
+* Includes 10 hands-on challenges inspired by the OWASP LLM Top 10, demonstrating how these vulnerabilities can be discovered and exploited in real-world scenarios.
 
 This project is intended for AI Security professionals to explore potential security risks in LLMs and learn effective mitigation strategies.
 
+# Top 10 2025
+
+| Vulnerability | Short Description |
+|-----------|-------------|
+| LLM01: Prompt Injection | xxx |
+| LLM02: Sensitive Information Disclosure | xxx |
+| LLM03: Supply Chain | xxx |
+| LLM04: Data and Model Poisoning | xxx |
+| LLM05: Improper Output Handling | xxx |
+| LLM06: Excessive Agency | xxx |
+| LLM07: System Prompt Leakage | xxx |
+| LLM08: Vector and Embedding Weaknesses | xxx |
+| LLM09: Misinformation | xxx |
+| LLM10: Unbounded Consumption | xxx |
+
+# Demo: LLM01, LLM02, LLM06?, LLM07?
 ## Overview (No API Key required)
 
-The project is primarily developed using Python and the Ollama framework, with the open source LLM models. The exercises are structured in the form of **CTF (Capture The Flag) challenges**, each with a clear objective, optional hints, and a flag awarded upon successful completion.
+* The project is primarily developed using Python and the Ollama framework, with the open source LLM models. 
+* The exercises are structured in the form of **CTF (Capture The Flag) challenges**, each with a clear objective, optional hints, and a flag awarded upon successful completion.
 
 ## Gettting started
 
@@ -30,28 +45,18 @@ This guide provides instructions for setting up and running the challenges.
 
 ### Setup
 
-#### 1. Clone the repository.
-> ```
-> git clone https://github.com/R3dShad0w7/PromptMe.git
-> ```
-
-#### 2. Go to challenge directory.
-> ```
-> cd PromptMe
-> ```
-
-#### 3. Install the dependencies.
+#### 1. Install the dependencies.
 > ```
 > pip install -r requirements.txt
 > ```
 
-#### 4. Download and Run Ollama
+#### 2. Download and Run Ollama
 
 > Download Ollama depending on your OS from https://ollama.com/download
 >```
 > ollama serve (in the separate terminal)
 > ollama pull mistral
-> ollama pull llama3
+> ollama pull llama3.2:1b
 > ollama pull sqlcoder
 > ollama pull granite3.1-moe:1b
 >```
@@ -71,17 +76,10 @@ Access the application @ http://127.0.0.1:5000
 
 #### 6. Start the challenge by clicking *start* button on particular category e.g. LLM01
 
-## Compatibility 
-
-This project currently supports macOS and Linux systems. Windows compatibility is in progress and will be released in an upcoming update.
 
 ## Spoilers
 
 [Solutions](https://github.com/R3dShad0w7/PromptMe/tree/main/solutions) to the challenges are provided for beginners who may not be familiar with exploiting vulnerabilities from the LLM Top 10. This guide is intended to help users solve the challenges and understand the underlying vulnerable code and components.
-
-## Connect
-
-If you face any challenges in setup, solving or any suggestions, please reach out to https://discord.gg/hB8Prk3w
 
 
 ## Disclaimer
@@ -93,21 +91,5 @@ Warning: The vulnerabilities shown in this project are for learning only and sho
 
 We welcome contributions from the community! Whether you're fixing bugs, improving documentation, or suggesting new challenges, your help is appreciated.
 
-If you're interested in contributing:
-
-    Fork the repository.
-
-    Create a new branch (git checkout -b feature-name).
-
-    Make your changes and commit them.
-
-    Push to your fork and create a Pull Request.
-
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/R3dShad0w7/PromptMe/blob/main/LICENSE) file for details.
-
-## Author
-
-The project is developed and maintained by [Divyesh](https://github.com/divyesh-0x01), [Srithesh](https://github.com/0xbughunter), [Praveen](https://github.com/praveen-kv), [Ranjit](https://www.linkedin.com/in/ranjit-singh-a788b579/), [Sumanth](https://github.com/SumanthGowda)
+# Original Source:
+[https://github.com/R3dshad0w7/promptme](https://github.com/R3dshad0w7/promptme)

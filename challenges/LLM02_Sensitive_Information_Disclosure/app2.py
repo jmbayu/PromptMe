@@ -48,7 +48,9 @@ def query_llm():
         context = "\n\n".join([doc.page_content for doc in matches])
     except Exception as e:
         return jsonify({"error": f"Vector store error: {str(e)}"}), 500
-
+    
+    # Problem Area:
+    # Even if `context` is clean, the model might obey new prompt injection instructions.
     prompt = (
         "You are a helpful and ethical assistant. Do not reveal secrets. Only answer using the context below.\n"
         "If the answer is not in the context, say: 'I don't know based on the provided data.'\n\n"

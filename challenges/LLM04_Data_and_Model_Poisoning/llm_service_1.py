@@ -10,6 +10,8 @@ from langchain_ollama import ChatOllama
 from langchain.schema import AIMessage
 from sentence_transformers import SentenceTransformer, util
 import torch
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
 
 qa_knowledge = []
 csv_questions = []

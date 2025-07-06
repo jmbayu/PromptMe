@@ -27,6 +27,13 @@ LLM Responds with all possible combinations that can be generate possible flag c
 
 - Use admin/admin to login to admin panel and inject these links
 
+The flag is usually located at
+http://127.0.0.1:5008/secured/flag
+http://127.0.0.1:8088/security/flag.txt
+http://127.0.0.1:5008/secure/flag_on__website
+http://127.0.0.1:5008/secured/flag.txt
+http://127.0.0.1:5008/secured-area/flag
+
 ![03](./images/03.jpg)
 
 P.S. It may generate invalid paths and invalid links, attempt it few times and one of the time it should collide to correct URL. 

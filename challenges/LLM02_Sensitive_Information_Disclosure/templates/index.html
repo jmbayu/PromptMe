@@ -75,6 +75,7 @@
             resize: vertical;
             min-height: 60px;
             margin-bottom: 10px;
+            transition: background 0.2s;
         }
 
         button {
@@ -107,7 +108,7 @@
     <div id="chatBox"></div>
 
     <div id="queryForm">
-        <textarea id="query" placeholder="Type your question here..." onkeydown="if(event.key === 'Enter' && !event.shiftKey){event.preventDefault(); submitQuery();}"></textarea>
+        <textarea id="query" placeholder="Type your question here..." onkeydown="if(event.key === 'Enter' && !event.shiftKey){event.preventDefault(); submitQuery();}" style="transition: background 0.2s;"></textarea>
         <button onclick="submitQuery()">Submit</button>
 
         <div id="loadingSpinner" style="display: none; color: white; margin-top: 10px;">
@@ -138,6 +139,8 @@
             if (!query) return;
 
             loadingSpinner.style.display = "block";
+            queryInput.readOnly = true;
+            queryInput.style.backgroundColor = "#cccccc";
 
             fetch("/query", {
                 method: "POST",
@@ -174,6 +177,8 @@
             })
             .finally(() => {
                 loadingSpinner.style.display = "none";
+                queryInput.readOnly = false;
+                queryInput.style.backgroundColor = "";
             });
         }
 

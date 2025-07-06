@@ -33,7 +33,7 @@ def store_message(user_id, role, content):
 # Main chat model call
 def call_ollama(prompt):
     response = ollama.chat(
-        model='mistral',  # Your main chat model
+        model='mistral',  # Our main chat model
         messages=[{"role": "user", "content": prompt}]
     )
     return response['message']['content']
@@ -58,7 +58,7 @@ def check_malicious_input(user_input):
         verdict = verdict_raw.upper()
         print("[DEBUG] Guardian Model Raw Response:", verdict_raw)
 
-        # New flexible matching logic
+        # Flexible matching logic
         if "MALICIOUS" in verdict or "YES" in verdict:
             print("[DEBUG] Input flagged as malicious.")
             return True
@@ -161,4 +161,4 @@ def logout():
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5001, debug=False)
+    app.run(host="127.0.0.1", port=5001, debug=True)

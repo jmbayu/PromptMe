@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 current_folder = os.getcwd()
-model = SentenceTransformer("paraphrase-MiniLM-L3-v2", cache_folder=current_folder)
+model = SentenceTransformer("paraphrase-MiniLM-L3-v2")
 index = faiss.IndexFlatL2(model.get_sentence_embedding_dimension())
 
 doc_map = {}
