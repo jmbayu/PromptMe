@@ -1,5 +1,9 @@
 import subprocess
 import re
+import os
+import ollama
+
+client = ollama.Client(host=os.environ.get("OLLAMA_HOST", "http://localhost:11434"))
 
 def generate_sql_prompt(natural_language_prompt):
     return f"""
@@ -42,18 +46,12 @@ def query_llm(prompt: str, model="sqlcoder"):
     """
     print("🔥 Calling Ollama with prompt:", prompt)
 
-    result = subprocess.run(
-        ["ollama", "run", model],
-        input=prompt.encode(),
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE
-    )
-
-    if result.returncode != 0:
-        print("LLM ERROR:", result.stderr.decode("utf-8"))
+    try:
+        response = client.chat(model=model, messages=[{'role': 'user', 'content': prompt}])
+        raw_output = response['message']['content']
+    except Exception as e:
+        print("LLM ERROR:", e)
         return "LLM Error: Model not found or execution failed."
-
-    raw_output = result.stdout.decode("utf-8").strip()
 
     # Extract and sanitize SQL
     sql = extract_sql_from_output(raw_output)

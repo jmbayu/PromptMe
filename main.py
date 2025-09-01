@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, request
-import subprocess, sys, os, requests, psutil, time, socket
+import subprocess, sys, os, requests, psutil, time, socket, signal
 
 app = Flask(__name__)
 
@@ -122,5 +122,18 @@ def stop_challenge_route(challenge_id):
 
     return f"No running instance for Challenge {challenge_id}."
 
+def shutdown(signum, frame):
+    print("Shutting down...")
+    for port, process in running_apps.items():
+        print(f"Stopping challenge on port {port}...")
+        process.terminate()
+        try:
+            process.wait(timeout=5)
+        except (psutil.TimeoutExpired, ProcessLookupError):
+            process.kill()
+    sys.exit(0)
+
 if __name__ == "__main__":
+    signal.signal(signal.SIGINT, shutdown)
+    signal.signal(signal.SIGTERM, shutdown)
     app.run(host="0.0.0.0", port=5000, debug=False)

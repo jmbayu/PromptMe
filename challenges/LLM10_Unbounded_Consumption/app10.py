@@ -3,9 +3,10 @@ from langchain_ollama import ChatOllama
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import SystemMessagePromptTemplate, HumanMessagePromptTemplate, ChatPromptTemplate
 import time
+import os
 
 app = Flask(__name__)
-model = ChatOllama(model="mistral", base_url="http://localhost:11434/")
+model = ChatOllama(model="mistral", base_url=os.environ.get("OLLAMA_HOST", "http://localhost:11434"))
 #model = ChatOllama(model="mistral", base_url="http://host.docker.internal:11434/")
 
 # Hidden system instruction
